@@ -35,7 +35,7 @@
 }
 
 body {
-    max-width: 32rem;
+    max-width: 64rem;
     margin: 4rem auto;
     font-family: var(--font-family-base);
     background-color: var(--color-grey-100);
@@ -48,9 +48,9 @@ p {
 }
 
 .card-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .card-1 {
@@ -64,6 +64,7 @@ p {
     background-image: url("/images/bg-pattern-quotation.svg");
     background-repeat: no-repeat;
     background-position: right 2rem top;
+    grid-column: span 2;
 }
 
 .card-2 {
@@ -84,6 +85,8 @@ p {
     border-radius: 0.5rem;
     color: var(--color-black);
     background-color: var(--color-white);
+    grid-row-start: 2;
+
 }
 
 .card-4 {
@@ -94,6 +97,7 @@ p {
     border-radius: 0.5rem;
     color: var(--color-white);
     background-color: var(--color-dark-blue);
+    grid-column: span 2;
 }
 
 .card-5 {
@@ -104,6 +108,9 @@ p {
     border-radius: 0.5rem;
     color: var(--color-black);
     background-color: var(--color-white);
+    grid-column-start: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
 }
 
 .card-author {
